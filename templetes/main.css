@@ -32,6 +32,26 @@
    margin: 0.5rem;
    width: 10rem;
 }
+.menu{
+    display:flex;
+    flex-direction: row;
+    flex-wrap : wrap;
+    width: 100%;
+    font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+    margin: 0.5rem;
+    border: none;
+    text-align: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+.product{
+    margin-bottom : 10%;
+    font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+}
+.product_img{
+    height:250px;
+    width:200px;
+  }
 footer {
     background-color: black;
     color:white;
