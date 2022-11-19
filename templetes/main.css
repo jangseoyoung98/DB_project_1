@@ -8,8 +8,29 @@
     font-weight: 400;
     font-style: normal;
 }
-body {
-    
+.flex-container {
+    display: flex;
+    justify-content: center;
+  }
+.flex-container > div {
+    padding: 10px;
+  }
+.check{
+    text-align: center;
+    font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+    border: solid white;
+}
+.btn{
+   border-radius:5px;
+   background-color: #e5e5e5;
+   font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+   border: none;
+   padding: 0.5rem 1rem;
+   border-radius: 0.25rem;
+   cursor: pointer;
+   transition: 0.5s;
+   margin: 0.5rem;
+   width: 10rem;
 }
 footer {
     background-color: black;
