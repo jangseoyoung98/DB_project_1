@@ -32,6 +32,10 @@
    margin: 0.5rem;
    width: 10rem;
 }
+a{
+    text-decoration-line: none;
+    color:black;
+}
 .menu{
     display:flex;
     flex-direction: row;
