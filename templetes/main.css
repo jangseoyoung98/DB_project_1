@@ -66,3 +66,7 @@ footer {
     margin-top: -1rem;
     text-align: center;
 }
+.detail_header{
+    margin-left:10rem;
+    font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+}
