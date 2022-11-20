@@ -5,7 +5,9 @@ from menu.filters import ListingFilter
 from menu.models import Listing
 from menu.forms import ListingForm # 추가할 것
 
-
+def main_view(request):
+    return render(request, 'main.html', {"name": "DB_project"})
+    # 위에 거 수정
 
 def home_view(request):
     listings = Listing.objects.all()
