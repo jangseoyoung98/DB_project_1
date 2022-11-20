@@ -68,6 +68,136 @@ a{
     height:250px;
     width:200px;
   }
+
+.detail_header{
+    margin-left:10rem;
+    font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+}
+.detail_product {
+    width: 1100px;
+    margin: 0 auto;
+}
+div.product_view_wrap1 {
+    width: 1100px;
+    height:auto;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+   
+}
+div.product_view_wrap1:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.product_img{
+        vertical-align: top;
+        max-width: 100%;
+}
+.product_info {
+    width: 610px;
+    float: right;
+    position: relative;
+}
+.basic_info {
+    position: relative;
+}
+div.basic_info h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    border-bottom: 2px solid #333;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+}
+div.basic_info h4 span {
+    font-size: 14px;
+    font-family: "Arial";
+    font-weight: normal;
+    color: #666;
+}
+div.basic_info p.t1 {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    min-height: 40px;
+}
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: rgb(192, 192, 192);
+    border-image: initial;
+}
+.hid {
+    position: absolute;
+    left: -9999px;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+div.product_info div.product_info_head {
+    height: 59px;
+    line-height: 59px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+div.product_info div.product_info_head p.tit {
+    font-size: 18px;
+    color: #222;
+    padding-left: 10px;
+    margin-top:0px;
+}
+.selectTxt2 {
+    margin-right: 18px;
+    font-size: 16px;
+    color: #444;
+    font-family: "nbg";
+    margin-right: 6px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    display: inline-block;
+}
+div.product_info_content {
+    width: 100%;
+    margin: 20px 0;
+}
+div.product_info_content ul {
+    float: left;
+}
+div.product_info_content li {
+    margin-bottom: 15px;
+    padding: 0 10px;
+    line-height: 1.6;
+}
+div.product_info_content dl {
+    width: 100%;
+    font-size: 14px;
+    color: #444;
+}
+div.product_info_content dl dt {
+    float: left;
+    width: 85%;
+}
+div.product_info_content dl dd {
+    float: right;
+    width: 15%;
+    text-align: right;
+}
+.allergy_info {
+    position: relative;
+    height: 28px;
+}
 footer {
     background-color: black;
     color:white;
@@ -78,8 +208,10 @@ footer {
     margin-top: -1rem;
     text-align: center;
     width:100%;
+    bottom:0;
 }
-.detail_header{
-    margin-left:10rem;
-    font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+div.product_info {
+    width: 610px;
+    float: right;
+    position: relative;
 }
