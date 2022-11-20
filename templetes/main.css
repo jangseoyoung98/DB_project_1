@@ -1,6 +1,7 @@
 .logo{
     background-color: #e5e5e5;
     text-align: center;
+    width:100%;
 }
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -19,6 +20,13 @@
     text-align: center;
     font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
     border: solid white;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+
 }
 .btn{
    border-radius:5px;
@@ -47,6 +55,10 @@ a{
     text-align: center;
     position: relative;
     margin-bottom: 3rem;
+    margin-left:0px;
+    margin-right:0px;
+    padding-right:0px;
+    padding-left:0px;
 }
 .product{
     margin-bottom : 10%;
@@ -65,6 +77,7 @@ footer {
     padding: 1rem;
     margin-top: -1rem;
     text-align: center;
+    width:100%;
 }
 .detail_header{
     margin-left:10rem;
