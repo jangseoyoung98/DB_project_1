@@ -65,20 +65,21 @@ a{
     font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
 }
 .product_img{
-    height:250px;
-    width:200px;
+    height:500px;
+    width:400px;
   }
 
 .detail_header{
-    margin-left:10rem;
+    margin-left:15.4rem;
     font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
 }
 .detail_product {
     width: 1100px;
     margin: 0 auto;
+    margin-left: 150px;
 }
 div.product_view_wrap1 {
-    width: 1100px;
+    width: 1220px;
     height:auto;
     padding-bottom: 40px;
     margin-bottom: 40px;
@@ -92,6 +93,7 @@ div.product_view_wrap1:after {
 .product_img{
         vertical-align: top;
         max-width: 100%;
+        margin-left: 6rem;
 }
 .product_info {
     width: 610px;
@@ -100,6 +102,8 @@ div.product_view_wrap1:after {
 }
 .basic_info {
     position: relative;
+    font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+    margin-top: -35px;
 }
 div.basic_info h4 {
     font-size: 24px;
@@ -150,12 +154,14 @@ div.product_info div.product_info_head {
     line-height: 59px;
     position: relative;
     border-bottom: 1px solid #ddd;
+    font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
 }
 div.product_info div.product_info_head p.tit {
     font-size: 18px;
     color: #222;
     padding-left: 10px;
     margin-top:0px;
+    font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
 }
 .selectTxt2 {
     margin-right: 18px;
@@ -167,6 +173,7 @@ div.product_info div.product_info_head p.tit {
     right: 6px;
     top: 6px;
     display: inline-block;
+    font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
 }
 div.product_info_content {
     width: 100%;
