@@ -67,8 +67,11 @@ a{
 .product_img{
     height:500px;
     width:400px;
+    margin-left:20px;
   }
-
+.product_img_box{
+    margin-left:91px;
+}
 .detail_header{
     margin-left:15.4rem;
     font-family: 'Pretendard-Regular', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
@@ -181,6 +184,8 @@ div.product_info_content {
 }
 div.product_info_content ul {
     float: left;
+    margin-left: 2em;
+    margin-right: 1em;
 }
 div.product_info_content li {
     margin-bottom: 15px;
@@ -194,11 +199,11 @@ div.product_info_content dl {
 }
 div.product_info_content dl dt {
     float: left;
-    width: 85%;
+    width: 65%;
 }
 div.product_info_content dl dd {
     float: right;
-    width: 15%;
+    width: 6%;
     text-align: right;
 }
 .allergy_info {
