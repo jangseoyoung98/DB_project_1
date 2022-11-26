@@ -61,12 +61,18 @@ class MenuCategory(models.Model):
 
 class Listing(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True, editable=False)
+    category = models.ForeignKey('MenuCategory', models.DO_NOTHING)
     brand = models.ForeignKey(Brand, models.DO_NOTHING) # 브랜드명 필요
+    allergy = models.ForeignKey(MenuAllergy, models.DO_NOTHING)
+    image = models.ImageField()
     # 이미지 -> 음료 사진 필요
     menu = models.ForeignKey(Menu, models.DO_NOTHING) 
     # 메뉴명, 메뉴 설명, 영양성분 필요
-    
 
+    """
+    def __str__(self):
+        return f'{self.seller.user.username}\'s Listing - {self.model}'
+    """
 
 
 
