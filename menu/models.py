@@ -59,6 +59,7 @@ class MenuCategory(models.Model):
         db_table = 'menu_category'
 ##########################################################
 
+"""
 class Listing(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True, editable=False)
     category = models.ForeignKey('MenuCategory', models.DO_NOTHING)
@@ -69,11 +70,10 @@ class Listing(models.Model):
     menu = models.ForeignKey(Menu, models.DO_NOTHING) 
     # 메뉴명, 메뉴 설명, 영양성분 필요
 
-    """
     def __str__(self):
         return f'{self.seller.user.username}\'s Listing - {self.model}'
-    """
 
+"""
 
 
 
