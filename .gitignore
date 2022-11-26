@@ -83,3 +83,5 @@ db1_venv/
 .idea/
 
 __pycache__/
+
+.my_settings.py

@@ -1,6 +1,8 @@
 import uuid
 from django.db import models
 
+
+##########################################################
 class Allergy(models.Model):
     allergy_id = models.IntegerField(primary_key=True)
     allergy_name = models.CharField(max_length=45)
@@ -55,3 +57,19 @@ class MenuCategory(models.Model):
     class Meta:
         managed = False
         db_table = 'menu_category'
+##########################################################
+
+class Listing(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True, editable=False)
+    brand = models.ForeignKey(Brand, models.DO_NOTHING) # 브랜드명 필요
+    # 이미지 -> 음료 사진 필요
+    menu = models.ForeignKey(Menu, models.DO_NOTHING) 
+    # 메뉴명, 메뉴 설명, 영양성분 필요
+    
+
+
+
+
+
+
+
