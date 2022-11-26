@@ -9,5 +9,11 @@ class ListingForm(forms.ModelForm):
 
     class Meta:
         model = Listing
-        fields = {'brand', }
-        ## 필드 채워넣기
+        fields = {'brand_name',
+                  'menu_name',
+                  'description',
+                  'size',
+                  'calorie', 'sodium',
+                  'saturated_fat', 'sugar',
+                  'protein', 'caffeine'
+                  }

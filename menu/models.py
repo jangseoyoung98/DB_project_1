@@ -11,6 +11,9 @@ class Allergy(models.Model):
         managed = False
         db_table = 'allergy'
 
+    def __str__(self):
+        return self.allergy_name
+
 
 class Brand(models.Model):
     brand_id = models.IntegerField(primary_key=True)
@@ -20,6 +23,8 @@ class Brand(models.Model):
         managed = False
         db_table = 'brand'
 
+    def __str__(self):
+        return self.brand_name
 
 class Menu(models.Model):
     menu_id = models.IntegerField(primary_key=True)
@@ -40,6 +45,8 @@ class Menu(models.Model):
         managed = False
         db_table = 'menu'
 
+    def __str__(self):
+        return self.menu_name
 
 class MenuAllergy(models.Model):
     menu = models.ForeignKey(Menu, models.DO_NOTHING)
@@ -51,29 +58,28 @@ class MenuAllergy(models.Model):
 
 
 class MenuCategory(models.Model):
-    category_id = models.IntegerField(primary_key=True)
+    category_id = models.IntegerField(primary_key= True)
     category_name = models.CharField(max_length=45)
 
     class Meta:
         managed = False
         db_table = 'menu_category'
 ##########################################################
+class Listing(Allergy, Menu):
+    pass
+    # 이미지 -> 음료 사진 필요
 
-"""
-class Listing(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True, editable=False)
+    """
     category = models.ForeignKey('MenuCategory', models.DO_NOTHING)
     brand = models.ForeignKey(Brand, models.DO_NOTHING) # 브랜드명 필요
     allergy = models.ForeignKey(MenuAllergy, models.DO_NOTHING)
-    image = models.ImageField()
-    # 이미지 -> 음료 사진 필요
+    # image = models.ImageField()
     menu = models.ForeignKey(Menu, models.DO_NOTHING) 
     # 메뉴명, 메뉴 설명, 영양성분 필요
-
+    """
     def __str__(self):
-        return f'{self.seller.user.username}\'s Listing - {self.model}'
-
-"""
+        return self.menu_name
+        # greturn f'{self.menu_name}\'s Listing'
 
 
 
