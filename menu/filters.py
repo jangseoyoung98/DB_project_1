@@ -15,7 +15,6 @@ class ProductFilter(django_filters.Filterset):
                 # 'price' :
                 # 'caffeine':
             }
-"""
 
 class ProductFilter(django_filters.Filterset):
 
@@ -31,9 +30,9 @@ class ProductFilter(django_filters.Filterset):
                 fields = {
                         'brand_name': ['exact']
                 }
+"""
 
-
-        """
-        - 브랜드, 카테고리, 알레르기 → 체크 박스
-        - 칼로리, 가격, 카페인 → 스크롤 선택
-        """
+"""
+- 브랜드, 카테고리, 알레르기 → 체크 박스
+- 칼로리, 가격, 카페인 → 스크롤 선택
+"""

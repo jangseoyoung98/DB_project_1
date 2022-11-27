@@ -4,13 +4,14 @@ from django.contrib import messages
 from django.http import JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404
 
-from menu.filters import ProductFilter
-from menu.forms import ListingForm
-from menu.models import Listing
+# from menu.filters import ProductFilter
+# from menu.forms import ListingForm
+from menu.models import *
 
 def main_view(request):
-    return render(request, "templates/main.html", {"name": "cafe_db"})
+    return render(request, "templates/home.html", {"name": "cafe_db"})
 
+"""
 def home_view(request):
     listings = Listing.objects.all()
     listing_filter = ProductFilter(request.GET, queryset=listings)
@@ -35,3 +36,4 @@ def listing_view(request, id):
         return redirect('home')
 
 
+"""

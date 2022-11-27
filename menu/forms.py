@@ -1,8 +1,8 @@
 from django import forms
 
-from .models import Listing
+# from .models import Listing
 
-
+""""
 class ListingForm(forms.ModelForm):
     image = forms.ImageField()
 
@@ -15,3 +15,4 @@ class ListingForm(forms.ModelForm):
                   'menu.calorie', 'menu.sodium',
                   'menu.saturated_fat', 'menu.sugar',
                   'menu.protein', 'menu/caffeine'}
+"""

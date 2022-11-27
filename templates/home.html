@@ -1,17 +1,14 @@
-{% extends 'base/base.html' %}
+{% extends 'base/../base.html' %}
 {% load static %}
 
 {% block content %}
 <main>
         <form method="get">
-            {{  listing_filter.form }}
         <p><button type="submit" class="btn">검색</button></p>
         </form>
 
-        {% for listing in listing_filter.qs %}
         <div>
-            {% include "components/listing_card.html" %}
+            {% include "components/components/listing_card.html" %}
         </div>
-        {%  endfor %}
 </main>
 {% endblock %}
