@@ -1,5 +1,8 @@
 import uuid
+
 from django.db import models
+
+from menu.consts import CATEGORY, BRANDS
 
 
 ##########################################################
@@ -28,8 +31,8 @@ class Brand(models.Model):
 
 class Menu(models.Model):
     menu_id = models.IntegerField(primary_key=True)
-    brand = models.ForeignKey(Brand, models.DO_NOTHING)
-    category = models.ForeignKey('MenuCategory', models.DO_NOTHING)
+    brand = models.ForeignKey('Brand', on_delete=models.CASCADE)
+    category = models.ForeignKey('MenuCategory', on_delete=models.CASCADE)
     menu_name = models.CharField(max_length=100, db_collation='utf8mb4_0900_ai_ci')
     calorie = models.FloatField(blank=True, null=True)
     sugars = models.FloatField(blank=True, null=True)
@@ -49,8 +52,8 @@ class Menu(models.Model):
         return self.menu_name
 
 class MenuAllergy(models.Model):
-    menu = models.ForeignKey(Menu, models.DO_NOTHING)
-    allergy = models.ForeignKey(Allergy, models.DO_NOTHING)
+    menu = models.ForeignKey('Menu', on_delete=models.CASCADE)
+    allergy = models.ForeignKey('Allergy', on_delete=models.CASCADE)
 
     class Meta:
         managed = False
@@ -65,22 +68,20 @@ class MenuCategory(models.Model):
         managed = False
         db_table = 'menu_category'
 ##########################################################
-class Listing(Allergy, Menu):
-    pass
+
+"""
+class Listing(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True, editable=False)
+    category = models.ForeignKey('MenuCategory', choices=CATEGORY, on_delete=models.CASCADE)  # 해당 메뉴의 -> category.category_name 필요
+    brand = models.ForeignKey('Brand', choices=BRANDS, on_delete=models.CASCADE)  # 해당 메뉴의 -> brand.brand_name 필요
+    allergy = models.ForeignKey('MenuAllergy', on_delete=models.CASCADE)  # 해당 메뉴의 -> allergy.allergy_name 필요
+    menu = models.ForeignKey('Menu', on_delete=models.CASCADE)  # 해당 메뉴의 -> menu_name, description, price (calorie, sugars, protein, satured_fat, sodium, caffeine) 필요
+
     # 이미지 -> 음료 사진 필요
 
-    """
-    category = models.ForeignKey('MenuCategory', models.DO_NOTHING)
-    brand = models.ForeignKey(Brand, models.DO_NOTHING) # 브랜드명 필요
-    allergy = models.ForeignKey(MenuAllergy, models.DO_NOTHING)
-    # image = models.ImageField()
-    menu = models.ForeignKey(Menu, models.DO_NOTHING) 
-    # 메뉴명, 메뉴 설명, 영양성분 필요
-    """
     def __str__(self):
-        return self.menu_name
-        # greturn f'{self.menu_name}\'s Listing'
-
+       return f'{self.id}\'s Listing - {self.menu.menu_name}'
+"""
 
 
 

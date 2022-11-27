@@ -9,32 +9,20 @@ from menu.forms import ListingForm
 from menu.models import Listing
 
 def main_view(request):
+    return render(request, "templates/main.html", {"name": "cafe_db"})
+
+def home_view(request):
     listings = Listing.objects.all()
     listing_filter = ProductFilter(request.GET, queryset=listings)
     context = {
         'listing_filter': listing_filter
     }
-    return render(request, 'templates/main.html', context)
+    return render(request, 'templates/home.html', context)
 
 def list_view(request):
-    if request.method == 'POST':
-        try:
-            listing_form = ListingForm(request.POST, request.FILES)
-            if listing_form.is_valid():
-                listing = listing_form.save(commit=False)
-                listing.save()
-                messages.info(
-                    request, f'{listing.model} Listing Posted Successfully!')
-                return redirect('main')
-            else:
-                raise Exception()
-        except Exception as e:
-            print(e)
-            messages.error(
-                request, 'An error occured while posting the listing.')
-    elif request.method == 'GET':
+    if request.method == 'GET':
         listing_form = ListingForm()
-        return render(request, 'templates/product.html', {'listing_form': listing_form})
+        return render(request, 'templates/list.html', {'listing_form': listing_form})
 
 def listing_view(request, id):
     try:

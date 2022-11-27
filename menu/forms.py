@@ -1,4 +1,3 @@
-import re # re 모듈 제공 함수 사용
 from django import forms
 
 from .models import Listing
@@ -9,11 +8,10 @@ class ListingForm(forms.ModelForm):
 
     class Meta:
         model = Listing
-        fields = {'brand_name',
-                  'menu_name',
-                  'description',
-                  'size',
-                  'calorie', 'sodium',
-                  'saturated_fat', 'sugar',
-                  'protein', 'caffeine'
-                  }
+        fields = {'brand.brand_name',
+                  'menu.menu_name',
+                  'menu.description',
+                  'menu.size',
+                  'menu.calorie', 'menu.sodium',
+                  'menu.saturated_fat', 'menu.sugar',
+                  'menu.protein', 'menu/caffeine'}

@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko" class="black">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CAFE MAIN</title>
+
+   <!-- Custom Style CSS -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    <div {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}>
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="wrap">
+        <header>
+            <div class="logo">
+                <a href="#">
+                    <img src="{% static 'images/logo.png' %}" alt="로고" width="17%">
+                </a>
+            </div>
+        </header>
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+</body>
+
+<footer>
+    <p>DB PROJECT
+        CAFE MENU RECOMMEND
+
+        강예원 장서영 지수민</p>
+</footer>
+</html>
