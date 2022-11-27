@@ -3,7 +3,6 @@ from imp import reload
 from django.contrib import messages
 from django.http import JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404
-from django.shortcuts import render
 
 from menu.filters import ProductFilter
 from menu.forms import ListingForm
