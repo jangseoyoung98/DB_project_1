@@ -1,29 +1,24 @@
     <fieldset class="check">
-        <p><b>브랜드</b></p>
+        <p><b>카페 브랜드</b></p>
             {% for i in brands %}
             <label><input type="radio" value="{{ i.id }}" name="brands">{{ i.brand_name }}</label>
             {% endfor %}
 
-        <p><b>카테고리</b></p>
+        <p><b>음료 종류</b></p>
             {% for i in categorys %}
             <label><input type="radio" value="{{ i.id }}" name="categorys">{{ i.category_name }}</label>
             {% endfor %}
 
-        <p><b>알레르기</b></p>
-            {% for i in allergys %}
-            <label><input type="radio" value="{{ i.id }}" name="allergys">{{ i.allergy_name }}</label>
-            {% endfor %}
-
 <!-- 아래 세 항목은 그냥 사용자가 직접 입력하는 걸로 바꿀 것-->
     <div class="flex-container">
-            <div><p><b><label for="calories">칼로리</label></b></p>
-                <input type="number" name="calorie">
+            <div><p><b><label for="calories">최대 칼로리</label></b></p>
+                <input type="number" name="calorie" palceholder="( )kcal 이하">
             </div>
-            <div><p><b><label for="money">가격</label></b></p>
-                <input type="number" name="money">
+            <div><p><b><label for="money">최대 가격 (단위 '원')</label></b></p>
+                <input type="number" name="money" palceholder="( )원 이하">
             </div>
-            <div><p><b><label for="caffeine">카페인</label></b></p>
-                <input type="number" name="caffeine">
+            <div><p><b><label for="caffeine">최대 카페인 양</label></b></p>
+                <input type="number" name="caffeine" palceholder="( )mg 이하">
             </div>
         </div>
     </fieldset>

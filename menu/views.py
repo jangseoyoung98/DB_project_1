@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render, get_object_or_404
+from django.shortcuts import render
 
 from menu.models import *
 from .category import CategoryForm
