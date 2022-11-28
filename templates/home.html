@@ -6,19 +6,14 @@
         <form method="post">
             {% csrf_token %}
             {%  include "listing.html" %}
-        <p><button type="submit" class="btn" >검색</button></p>
+        <p><button type="submit" class="btn">검색</button></p>
         </form>
 
         <div>
-            <fieldset class="menu">
-                <div class="flex-container">
-                        <div className="product">
-                            {% include "product.html" %}
-                        </div>
-                        <br>
-
-                </div>
-            </fieldset>
+            {% include "listing_card.html" %}
         </div>
 </main>
 {% endblock %}
+
+
+

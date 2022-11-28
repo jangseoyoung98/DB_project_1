@@ -18,11 +18,4 @@ class CategoryForm(forms.ModelForm):
         for i in categorys:
             names_c.append({"category_name": i.category_name, "id": i.category_id})
 
-    class Allergy:
-        allergys = Allergy.objects.all()
-        allergy_menu = MenuAllergy.objects.all()
-        names_a = []
-#        menus_a = []
-        for i in allergys:
-            names_a.append({"allergy_name": i.allergy_name, "id": i.allergy_id})
 

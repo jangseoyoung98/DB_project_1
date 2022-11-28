@@ -1,0 +1,18 @@
+{% load static %}
+<fieldset class="menu shadow-sm">
+    <div class="flex-container">
+        {% for listing in listings %}
+            <div className="product">
+                <!-- 이미지 넣기 -->
+                <h4 className="product_title">{{ listing.menu_name }}</h4>
+                <div className="product_mon">{{ listing.brand }}</div><br>
+                <div className="product_mon">{{ listing.category }}</div><br>
+                <div className="product_mon">{{ listing.calorie }}</div><br>
+                <div className="product_mon">{{ listing.caffeine }}</div><br>
+                <div className="product_mon">{{ listing.price }}</div><br>
+                <div className="product_mon">{{ listing.description }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</fieldset>
+
