@@ -1,14 +1,16 @@
-{% extends 'base/../base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
 <main>
-        <form method="get">
+        <form method="post">
+            {% csrf_token %}
+            {%  include "listing.html" %}
         <p><button type="submit" class="btn">검색</button></p>
         </form>
 
         <div>
-            {% include "components/components/listing_card.html" %}
+            {% include "listing_card.html" %}
         </div>
 </main>
 {% endblock %}

@@ -2,7 +2,6 @@ import uuid
 
 from django.db import models
 
-from menu.consts import CATEGORY, BRANDS
 
 
 ##########################################################
@@ -59,6 +58,9 @@ class MenuAllergy(models.Model):
         managed = False
         db_table = 'menu_allergy'
 
+    def __str__(self):
+        return self.menu.menu_name
+
 
 class MenuCategory(models.Model):
     category_id = models.IntegerField(primary_key= True)
@@ -67,22 +69,10 @@ class MenuCategory(models.Model):
     class Meta:
         managed = False
         db_table = 'menu_category'
-##########################################################
-
-"""
-class Listing(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True, editable=False)
-    category = models.ForeignKey('MenuCategory', choices=CATEGORY, on_delete=models.CASCADE)  # 해당 메뉴의 -> category.category_name 필요
-    brand = models.ForeignKey('Brand', choices=BRANDS, on_delete=models.CASCADE)  # 해당 메뉴의 -> brand.brand_name 필요
-    allergy = models.ForeignKey('MenuAllergy', on_delete=models.CASCADE)  # 해당 메뉴의 -> allergy.allergy_name 필요
-    menu = models.ForeignKey('Menu', on_delete=models.CASCADE)  # 해당 메뉴의 -> menu_name, description, price (calorie, sugars, protein, satured_fat, sodium, caffeine) 필요
-
-    # 이미지 -> 음료 사진 필요
 
     def __str__(self):
-       return f'{self.id}\'s Listing - {self.menu.menu_name}'
-"""
-
+        return self.category_name
+##########################################################
 
 
 
