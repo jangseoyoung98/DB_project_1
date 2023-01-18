@@ -1,5 +1,5 @@
 # DB_project_1
-(22-2) 'Database' toy project
+프로젝트 소개 업데이트 중..
 
 
 ![image](https://user-images.githubusercontent.com/77472570/212543831-e7981e2c-7f6b-43ec-91e8-1796e7e22b7d.png)
